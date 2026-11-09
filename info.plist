@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.popbot.alfred-atp-tour</string>
+	<key>connections</key>
+	<dict>
+		<key>D1A0008B-93B9-42C3-B1D6-F7C8EA595101</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E3B67A54-A596-4373-BE41-210D659C8102</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>PopBot</string>
+	<key>description</key>
+	<string>Men's ATP Tour live &amp; daily match scores, PIF ATP Rankings, full-season tournament calendar, draws, and player 2026 Service/Return stats.</string>
+	<key>name</key>
+	<string>ATP Tour</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>atp</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>🎾 Loading ATP Tour…</string>
+				<key>script</key>
+				<string>python3 atp.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Scores · atpr rankings · atps calendar · atpt draw · atpp player stats</string>
+				<key>title</key>
+				<string>ATP Tour</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D1A0008B-93B9-42C3-B1D6-F7C8EA595101</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>E3B67A54-A596-4373-BE41-210D659C8102</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## 🎾 ATP Tour — Alfred 5 Workflow
+
+### Triggers (`atp`)
+| Type this | What you get |
+|-----------|-------------|
+| `atp` | Current ATP Tour match scores (Live → Today Upcoming/Final → Recent Main Draw, Singles default) |
+| `atp {filter}` | Filter scoreboard: `atp alcaraz`, `atp paris`, `atp live`, `atp doubles`, `atp qual`, `atp all` |
+| `atpr` | Official PIF ATP Singles Rankings (Top 50 default) |
+| `atpr {query}` | Filter rankings: `atpr top10`, `atpr all` (Top 150), `atpr usa`, `atpr ita`, `atpr sinner` |
+| `atps` | Full-Season ATP Tour &amp; Grand Slam Calendar (Active → Upcoming → Completed) |
+| `atps {query}` | Filter calendar: `atps slam`, `atps 1000`, `atps 500`, `atps clay`, `atps grass`, `atps {city/month}` |
+| `atpt` / `atpt {query}` | Full Round-by-Round Tournament Draw (`Final` → `SF` → `QF` → `R16` → `R32`), `atpt doubles` |
+| `atpp {player}` | Unified Player Profile (Rank, YTD &amp; Career W-L/Titles/Prize, `⌘` Serve Stats, `⌥` Return Stats) + Recent Matches |
+</string>
+	<key>uidata</key>
+	<dict>
+		<key>D1A0008B-93B9-42C3-B1D6-F7C8EA595101</key>
+		<dict>
+			<key>xpos</key>
+			<real>140.0</real>
+			<key>ypos</key>
+			<real>110.0</real>
+		</dict>
+		<key>E3B67A54-A596-4373-BE41-210D659C8102</key>
+		<dict>
+			<key>xpos</key>
+			<real>490.0</real>
+			<key>ypos</key>
+			<real>110.0</real>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/PopBot/alfred-atp-tour</string>
+</dict>
+</plist>
